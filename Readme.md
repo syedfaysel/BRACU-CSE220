@@ -16,14 +16,13 @@ Week 3 | Stacks and Queues
 Lecture 1 | Stack Implementation, infix-postfix conversions, string reversal, edit history maintenance, grid traversal, histogram problem etc.
 Lecture 2: |  Queue Implementation, palindrome checking, grid traversal etc.  
 Week 4 | Recursion
-Lecture 1 | Recursive definitions recurrence relations, recursive programming, fibonacci numbers, factorials, length of
-a string or list, sum of an array, exponentiation etc.
+Lecture 1 | Recursive definitions recurrence relations, recursive programming, fibonacci numbers, factorials, length of a string or list, sum of an array, exponentiation etc.
 Lecture 2 | linear search, binary search, finding max of a list in the linear way or the divide and conquer approach, selection sort, insertion sort and bubble sort, Iterative memoization  and recursive memoization.
 Week 5 |  Searching and Sorting
 Lecture 1 | Searching Linear search, binary search, ternary search, random search etc.
 Lecture 2 | Sorting Insertion sort, bubble sort, selection sort etc.  
 Week 6 | Graph
-Lecture 1 | Graph Terminologies Directed vs undirected graphs, weighted vs unweighted graphs, directed acyclic graphs etc Lecture 2: Graph Representations Adjacency matrix vs adjacency list, Graph Traversal Breadth first search vs depth first search. 
+Lecture 1 | Graph Terminologies Directed vs undirected graphs, weighted vs unweighted graphs, directed acyclic graphs etc Lecture 2 | Graph Representations Adjacency matrix vs adjacency list, Graph Traversal Breadth first search vs depth first search. 
 Week 7 | Trees
 Lecture 1 | Tree terminologies Free tree vs rooted tree, ordered tree, n-ary tree tree, binary tree etc, recursive definitions of n-ary tree, rooted tree, ordered tree etc
 Lecture 2 | Tree Traversal pre-order, post order, in-order, breadth first, depth first etc, some recursive algorithms Finding the depth, sum, max etc of a tree.  
