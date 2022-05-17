@@ -1,8 +1,5 @@
 #reversing an array: in place (Algorithm)
 
-from re import X
-
-
 def reverse(source):
 
     i=0 #pointer at 0th index of source
