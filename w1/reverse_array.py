@@ -6,15 +6,15 @@ def reverse(source):
 
     i=0 #pointer at 0th index of source
 
-    j=len(dest)-1 #pointer at last index of dest
+    j=len(dest)-1 #pointer at last index of dest (new array)
 
     while(i<len(source)):
 
         dest[j]=source[i] #copying element from source to dest
 
-        i=i+1
+        i+=1
 
-        j=j-1
+        j-=1
 
     return dest #returning the array containing the elements in reverse order
 
