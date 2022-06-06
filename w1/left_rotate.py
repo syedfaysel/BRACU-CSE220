@@ -1,6 +1,6 @@
 
 
-def leftShift(source,k):
+def leftRotate(source,k):
 
 
     # store the k number of values first in a temp list
@@ -13,7 +13,7 @@ def leftShift(source,k):
     while(i<len(source)-k):
         source[i]= source[i+k]
 
-        i+=k
+        i+=1
 
     # rotating the values
     j = len(source)-k
@@ -29,5 +29,5 @@ def leftShift(source,k):
 
 arr1 = [1,2,3,4,5,6]
 
-print(leftShift(arr1,1))
+print(leftRotate(arr1,2))
 

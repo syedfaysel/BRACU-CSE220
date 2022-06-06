@@ -16,10 +16,10 @@ def leftShift(source,k):
     while(i<len(source)-k):
         source[i]= source[i+k]
 
-        i+=k
+        i+=1
 
  
-    i =0
+    j = len(source) - k
     while(j<len(source)):
         source[j]=0
         j+=1  
@@ -29,5 +29,5 @@ def leftShift(source,k):
 
 arr1 = [1,2,3,4,5,6]
 
-print(leftShift(arr1,1))
+print(leftShift(arr1,2))
 
