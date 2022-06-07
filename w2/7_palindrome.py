@@ -27,5 +27,8 @@ def isPalindrome(source, size, start):
 
  # =========
 
-arr1 = [1,2,3,2,1]
-print(isPalindrome(arr1,))
+arr1 = [1,2,3,2,1,0,0,0]
+
+arr2 = [1,1,3,2,1,0,0,0]
+print(isPalindrome(arr1,5,0))
+print(isPalindrome(arr2,5,0))
