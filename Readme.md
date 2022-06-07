@@ -75,3 +75,5 @@ Personal Drive folder for cse220 [here](https://drive.google.com/drive/folders/1
 ***Self Suggestion***
 
 Workload - 30 days
+
+Ending on 1st August: 2022
