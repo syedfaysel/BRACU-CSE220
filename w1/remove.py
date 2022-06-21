@@ -2,6 +2,7 @@
 
 def removeElem(source, size, index):
 
+    # doing left shift after the given index
     for i in range(index, size):
         source[i] = source [i+1]
 

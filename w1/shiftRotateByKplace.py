@@ -4,15 +4,17 @@
 
 def rightShift(source, k):
 
+    # last index = size - 1 ; since, right shifting starts from ending
     i = len(source) - 1
 
+    # Decremental loop from last index to k
     while(i>=k):
 
         source[i] = source[i-k]
 
         i-=1
     
-    # setting the rest (k number of items) index values to zero
+    # setting the rest (k number of items/which are first k items) index values to zero
     for i in range(0,k):
         source[i] = 0
 
