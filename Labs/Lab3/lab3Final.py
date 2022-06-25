@@ -25,8 +25,7 @@ class LinkedList:
             self.head = a
         
         else:
-            head = Node(a[0])
-            self.head = head
+            self.head = Node(a[0])
             tail = self.head
             
             for i in range(1, len(a)):
@@ -270,14 +269,28 @@ class LinkedList:
     # Rotates the list to the right by 1 position.
     def rotateRight(self):
         # To Do
-        prevH = self.head
-        p = prevH.next
-        while(prevH.next):
-            prevH = prevH.next
+        pred = None # predecessor
+        prevH = self.head # interate prevH
 
-        prevH.next = self.head
+        # Iteratig till the 2nd last node
+        # since we have to find predecessor
+        while(prevH.next):
+            pred = prevH #
+            prevH = prevH.next
+            
+            # pred = predecessor node
+            # prevH = the middle node (Our desired head)
+            # prevH.next = last node
+
+        prevH.next = self.head  
         self.head = prevH
-        p.next = None
+
+        # assigning self.head as the prevH.next (as 2nd node)
+        # updating original head to our desired head (prevH)
+
+        pred.next = None
+        # pred.next = None makes the pred tail node
+        
 
 
 
