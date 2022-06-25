@@ -1,5 +1,6 @@
-
-
+# Name: Syed Faysel Ahammad Rajo
+# Student ID: 21101078
+# Lab 3: Linked List
 
 class Node:
     def __init__(self, e=None, n=None):
@@ -232,20 +233,22 @@ class LinkedList:
         pred = None
         # if index is 0
         if (idx ==0):
-            temp = self.head.next
-            # self.head = self.head.next
-            self.head = temp  # Update
+            removed = self.head.element
+            self.head = self.head.next
+
+            return removed
+
         # if index is not 0
         else:
             while(current):
 
                 if (idx-1 == i):
                     pred = current
-                    
+                    removed = pred.next.element
                     # newNode.next = pred.next
                     pred.next = current.next.next
                     
-                    return pred.next
+                    return removed
                 else:
                     i+=1
                 current = current.next
@@ -256,7 +259,7 @@ class LinkedList:
         # To Do
         pass # Remove this line
     
-    
+    #========================================
     # Rotates the list to the right by 1 position.
     def rotateRight(self):
         # To Do
@@ -344,3 +347,19 @@ h6.insert(95,3)
 h6.printList() # This should print: 85,10,20,95,30,40.  
 h6.insert(75,6)
 h6.printList() # This should print: 85,10,20,95,30,40,75. 
+
+
+print("////// Test 10 //////")
+a7 = [10,20,30,40,50,60,70]
+h7 = LinkedList(a7) # uses theconstructor where a is an built in list
+h7.printList() # This should print: 10,20,30,40,50,60,70.  
+    
+# removes Node at the given index. returns element of the removed node.
+# Check validity of index. return None if index is invalid.
+    
+print("Removed element:",h7.remove(0)) # This should print: Removed element: 10
+h7.printList() # This should print: 20,30,40,50,60,70.  
+print("Removed element: ",h7.remove(3)) # This should print: Removed element: 50
+h7.printList() # This should print: 20,30,40,60,70.  
+print("Removed element: ",h7.remove(4)) # This should print: Removed element: 70
+h7.printList() # This should print: 20,30,40,60. 
