@@ -257,13 +257,27 @@ class LinkedList:
     # Rotates the list to the left by 1 position.
     def rotateLeft(self):
         # To Do
-        pass # Remove this line
+        prevH = self.head
+        self.head = prevH.next
+
+        tail = prevH
+        while(tail.next):
+            tail = tail.next
+        tail.next = prevH
+        prevH.next = None
     
     #========================================
     # Rotates the list to the right by 1 position.
     def rotateRight(self):
         # To Do
-        pass # Remove this line
+        prevH = self.head
+        p = prevH.next
+        while(prevH.next):
+            prevH = prevH.next
+
+        prevH.next = self.head
+        self.head = prevH
+        p.next = None
 
 
 
@@ -363,3 +377,23 @@ print("Removed element: ",h7.remove(3)) # This should print: Removed element: 50
 h7.printList() # This should print: 20,30,40,60,70.  
 print("Removed element: ",h7.remove(4)) # This should print: Removed element: 70
 h7.printList() # This should print: 20,30,40,60. 
+
+
+print("////// Test 11 //////")
+a8 = [10,20,30,40]
+h8 = LinkedList(a8) # uses theconstructor where a is an built in list
+h8.printList() # This should print: 10,20,30,40.  
+    
+# Rotates the list to the left by 1 position.
+h8.rotateLeft()
+h8.printList() # This should print: 20,30,40,10.  
+    
+    
+print("////// Test 12 //////")
+a9 = [10,20,30,40]
+h9 = LinkedList(a9) # uses theconstructor where a is an built in list
+h9.printList() # This should print: 10,20,30,40.  
+    
+# Rotates the list to the right by 1 position.
+h9.rotateRight()
+h9.printList() # This should print: 40,10,20,30.
