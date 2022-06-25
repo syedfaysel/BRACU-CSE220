@@ -18,18 +18,21 @@ class LinkedList:
     # to the given LinkedList
 
     # Hint: Use the type() function to determine the data type of a
-        self.head = None
-        # To Do
-        self.list = a
-        head = Node(a[0])
-        self.head = head
-        tail = self.head
-        
-        for i in range(1, len(a)):
 
-            newNode = Node(a[i])
-            tail.next = newNode
-            tail = newNode 
+        # To Do
+        if (type(a)==Node):
+            self.head = a
+        
+        else:
+            head = Node(a[0])
+            self.head = head
+            tail = self.head
+            
+            for i in range(1, len(a)):
+
+                newNode = Node(a[i])
+                tail.next = newNode
+                tail = newNode 
 
     # ====================================
     # Count the number of nodes in the list
@@ -64,7 +67,7 @@ class LinkedList:
     # returns the reference of the Node at the given index. For invalid index return None.
     def nodeAt(self, idx):
         # To Do
-        if (idx<0 or idx>self.countNode()):
+        if (idx<0 or idx>=(self.countNode())):
             return None
 
         count = 0
@@ -100,7 +103,7 @@ class LinkedList:
     # parameter: index, element
     def set(self, idx, elem):
         # To Do
-        if (idx<0 or idx>self.countNode()):
+        if (idx<0 or idx>=self.countNode()):
             return None
         
         current = self.head
@@ -148,28 +151,38 @@ class LinkedList:
     def copyList(self):
         # To Do
         current = self.head
-        copyList = [None]*self.countNode()
-        i = 0
+        copyH = Node(current.element)
+        copyT = copyH
+        
+        current = current.next
+
         while(current):
-            copyList[i] = current.element
+
+            new = Node(current.element)
+            copyT.next = new
+            copyT = new
 
             current = current.next
-            i+=1
-        return copyList
+        return copyH
 
 
     # Makes a reversed copy of the given List. Returns the head reference of the reversed list.
     def reverseList(self):
         # To Do
-        revList = [None]*len(self.list)
+        
         current = self.head
-        j = len(revList)-1
-        while(current):
-            revList[j] = current.element
+        revH = Node(current.element)
+        current = current.next
 
+        while(current):
+            new = Node(current.element)
+
+            new.next = revH #assign 
+            revH = new #update 
+            
             current = current.next
-            j -=1
-        return revList
+            
+        return revH
 
 
     #=========================================
@@ -177,12 +190,17 @@ class LinkedList:
     # Check validity of index.
     def insert(self, elem, idx):
         # To Do
+        # index validation: in case of insert :(ide<0 or idx>(self.countNode())); cause we can insert even after the last index
+        if (idx<0 or idx>(self.countNode())):
+            return None
+
+        # if index is valid:-->   
         newNode = Node(elem)
         current = self.head
         i = 0
         # predecessor (Node before the idx position)
         pred = None
-        # if index is 0
+        # if index is 0 (Inserting at beginning)
         if (idx ==0):
             newNode.next = self.head # Assign
             self.head = newNode  # Update
@@ -198,13 +216,15 @@ class LinkedList:
                     break
                 else:
                     i+=1
-                current = current.next        
+                current = current.next
+
     #=======================================
+
     # removes Node at the given index. returns element of the removed node.
     # Check validity of index. return None if index is invalid.
     def remove(self, idx):
         # To Do
-        if (idx<0 or idx>self.countNode()):
+        if (idx<0 or idx>=self.countNode()):
             return None
         
         current = self.head
@@ -215,7 +235,7 @@ class LinkedList:
             temp = self.head.next
             # self.head = self.head.next
             self.head = temp  # Update
-        # if index is not 0]
+        # if index is not 0
         else:
             while(current):
 
@@ -260,6 +280,7 @@ print("////// Test 02 //////")
 myNode = h1.nodeAt(1)
 print(myNode.element) # This should print: 20. In case of invalid index This will generate an Error.
 
+
 print("////// Test 03 //////")
 # returns the element of the Node at the given index. For invalid idx return None.
 val = h1.get(2)
@@ -293,7 +314,7 @@ print(ask) # This should print: True.
 
 print("////// Test 07 //////")
 a2 = [10,20,30,40,50,60,70]
-h2 = LinkedList(a2) # uses theconstructor where a is an built in list
+h2 = LinkedList(a2) # uses the constructor where a is an built in list
 h2.printList() # This should print: 10,20,30,40,50,60,70.  
 # Makes a duplicate copy of the given List. Returns the head reference of the duplicate list.
 copyH=h2.copyList() # Head node reference of the duplicate list

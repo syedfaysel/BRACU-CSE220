@@ -1,4 +1,5 @@
-# Inserting an element on a given index, 
+# Insert on a LINEAR ARRAY
+# Inserting an element on a given index
 # Inserting doesn't mean replacing
 # To insert we have to right shift all other elements by 1 place after the given index
 

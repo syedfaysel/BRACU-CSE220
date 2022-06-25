@@ -25,14 +25,15 @@ def sortLinear(source, size):
 
 def sortCircular(source, size, start):
 
-    # index = start
+    i = start
 
-    #index i= (i+start)%len(source)
-    # j = (j+start)%len(source)
+    # index 
+    # i= (i+start)%len(source)
+    j = (1+start)%len(source)
 
-    for i in range(size): 
+    for x in range(size): 
 
-        for j in range(i+1, size):
+        for y in range(x+1, size):
 
             if source[i]>source[j]:
 
@@ -47,12 +48,10 @@ def sortCircular(source, size, start):
             
     return source 
 
-
-
 # =========================
 
-arr1 = [4,5,2,3,0,0]
-arr2 = [5,8,0,6,10]
+arr1 = [4,5,2,3,None,None]
+arr2 = [5,8,None,6,10]
 
 print(sortLinear(arr1,4))
 
