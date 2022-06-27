@@ -86,6 +86,9 @@ class LinkedList:
     # returns the element of the Node at the given index. For invalid idx return None.
     def get(self, idx):
         # To Do
+        # index validation
+        if (idx<0 or idx>=(self.countNode())):
+            return None
         # setting up a counter as index
         count = 0
         current = self.head
