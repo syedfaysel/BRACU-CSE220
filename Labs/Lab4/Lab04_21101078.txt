@@ -1,4 +1,6 @@
-
+# Syed Faysel Ahammad Rajo
+# Student ID: 21101078
+# Lab04: DHDLC
 
 class Node:
   def __init__(self, e=None, n=None, p=None):
