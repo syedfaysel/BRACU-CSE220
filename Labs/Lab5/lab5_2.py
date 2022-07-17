@@ -1,49 +1,56 @@
-# array based implementation
+# Linked list based implementation
+class Node:
+
+    def __init__(self, e=None,n=None):
+        self.element = e
+        self.next = n
 
 class Stack:
 
+    # using a dummy headed linked list
     def __init__(self):
-
-        self.list1 = [None]*20
+        self.head = Node()
         self.size = 0
 
+    def push(self, element):
 
-    def push(self,element):
-        
-        if self.size == len(self.list1):
-            print("Stack OVerflow")
-        else:        
-            self.list1[self.size] = element
-            self.size +=1
+        newNode = Node(element)
 
+        newNode.next = self.head.next
+        self.head.next = newNode
+        self.size +=1
 
     def pop(self):
-        if(self.size == 0):
-            print("Stack underflow")
+        if (self.size==0):
+            print("Stack Underflow")
         else:
-            temp = self.list1[self.size-1]
-            self.list1[self.size-1] = None
-            self.size -=1
-            return temp
+            # temp = (self.head.next.element)
+            removed_node = self.head.next
+            self.head.next = removed_node.next
+        
+            return removed_node.element
 
 
     def peek(self):
-        if (self.size == 0):
+        if (self.size==0):
             print("Stack Underflow")
         else:
-            return self.list1[self.size-1]
+            return (self.head.next.element)
 
-#============Tester================
-# dummyStack = Stack()
 
-# dummyStack.push(10)
-# print(dummyStack.peek())
-# dummyStack.pop()
-# print(dummyStack.peek())
+#==============Test Code================
 
-# ============== Solving Problem: Parentheses Balance ============
+# stack1 = Stack()
+# stack1.push(10)
+# stack1.push(20)
+# stack1.push(30)
+# stack1.push(40)
+# print(stack1.peek())
+# print(stack1.pop())
+# print(stack1.peek())
 
-# given an expression in string
+
+# ============= Solving assignment question ================
 
 def isBalanced(exp):
 
@@ -78,7 +85,6 @@ def isBalanced(exp):
     else:
         print("This expression is NOT correct.")
 
-# ============================================
 
 exp1 = "1+2*(3/4)"
 exp2 = "1+2*[3*3+{4–5(6(7/8/9)+10)–11+(12*8)]+14"
