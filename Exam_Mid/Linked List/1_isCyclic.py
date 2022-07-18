@@ -82,7 +82,7 @@ class Linkedlist:
 
         while(current):
             
-            if (current.next.element == -1):
+            if (current.element == -1):
                 flag = True
                 break
             else:
@@ -96,7 +96,7 @@ class Linkedlist:
 a = [10,30,40,50,60]
 
 ll = Linkedlist(a)
-# ll.makeCyclic(4,2)
+ll.makeCyclic(4,2)
 
 print(ll.isCyclic())
 
