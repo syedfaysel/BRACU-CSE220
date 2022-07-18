@@ -87,7 +87,7 @@ class llStack:
 # isBalanced() method : works for both array based stack (Task 1) & ll based stack (Task 2)
 
 def isBalanced(exp, stackType):
-
+    # exp = input()
     opn = "({["
     cls = ")}]"
     stack2 = stackType()
@@ -131,25 +131,16 @@ def isBalanced(exp, stackType):
         print("This expression is NOT correct.")
         print(message)
 
-# ============================================
+# =====================================================
 
-exp1 = "1+2*(3/4)"
-exp2 = "1+2*[3*3+{4–5(6(7/8/9)+10)–11+(12*8)]+14"
-exp3 = "1+2*[3*3+{4–5(6(7/8/9)+10)}–11+(12*8)/{13+13}]+14"
-exp4 = "1+2]*[3*3+{4–5(6(7/8/9)+10)–11+(12*8)]+14"
+exp = input()
 
 #========== Task 1: array based solution ===============
 
-isBalanced(exp1,arrStack)
-isBalanced(exp2,arrStack)
-isBalanced(exp3,arrStack)
-isBalanced(exp4,arrStack)
+isBalanced(exp,arrStack)
 
 #========== Task 2 : linkedlist based solution ================
 
-isBalanced(exp1,llStack)
-isBalanced(exp2,llStack)
-isBalanced(exp3,llStack)
-isBalanced(exp4,llStack)
+isBalanced(exp,llStack)
 
 # Code executed successfully
