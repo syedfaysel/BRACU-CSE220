@@ -1,5 +1,6 @@
 __pycache__/
-.o
-.exe
-.in
-.txt
+*.vscode
+*.o
+*.exe
+*.in
+*.txt
