@@ -42,3 +42,13 @@ ___
 
 ## Implementation of Queue 
 
+<br>
+
+## Examples of Queue
+
+### Priority Queue:  
+Waiting room for patients in hospital is an example of Noraml queue. But there can be emergency situation. In such case we may need a priority queue.  
+
+> Waiting room management system in a Hospital using priority queue.  
+1. Each patient will be assigned with an integer value denoting their emergency (values range from 1 - 3)  
+2. Lower value has higher priority.  
