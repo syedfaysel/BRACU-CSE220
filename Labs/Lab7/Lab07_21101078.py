@@ -23,16 +23,16 @@ print(fact(4))
 
 def fibo(n):
 
-    if (n==1):
+    if (n==0):
         return 0
-    elif (n== 2):
+    elif (n== 1):
         return 1
     else: 
         return fibo(n-1)+fibo(n-2)
 
 # Test : method call
-print(fibo(1))  # 1st term is 0, 
-print(fibo(7)) # 7th term is 8
+print(fibo(1))  # 1st term is 1, 
+print(fibo(6)) # 6th term is 8
 
 #============== 01_c: print elements of array =============
 
