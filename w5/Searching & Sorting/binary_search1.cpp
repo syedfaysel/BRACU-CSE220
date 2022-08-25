@@ -14,7 +14,7 @@ int main() {
 
     int arr[] = {2,3,5,6,7,8,9};
     int l=0, r=7;
-    // int mid = l+ (r-l)/2;
+    // int mid = l + (r-l)/2;
     int target; cin>>target;
     while(l<=r)
     {
