@@ -1,6 +1,4 @@
-from locale import currency
-import sys
-sys.setrecursionlimit(100000)
+
 
 def bubbleSort(a,n):
 
@@ -38,7 +36,7 @@ class Linkedlist:
         current = self.head
 
         for i in range(1,len(a)):
-            newNode = Node(a[i])
+            newNode = Node(a[i], None)
             current.next = newNode
             current = newNode
 

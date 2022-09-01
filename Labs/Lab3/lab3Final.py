@@ -10,7 +10,7 @@ class Node:
 
 
 class LinkedList:
-  
+
     def __init__(self, a):
     #  Design the constructor based on data type of a. If 'a' is built in python list then
     #  Creates a linked list using the values from the given array. head will refer
@@ -21,7 +21,7 @@ class LinkedList:
     # Hint: Use the type() function to determine the data type of a
 
         # To Do
-        if (type(a)==Node):
+        if (type(a)== Node):
             self.head = a
         
         else:
